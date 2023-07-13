@@ -9,6 +9,8 @@ from starter_code.resources.item import Item, ItemList
 from starter_code.resources.store import Store, StoreList
 from starter_code.resources.user import UserRegister
 
+import pytest
+
 
 app = Flask(__name__)
 
