@@ -1,5 +1,5 @@
-from starter_code.models.store import StoreModel
-from starter_code.models.item import ItemModel
+from models.store import StoreModel
+from models.item import ItemModel
 from tests.general_base_test import GeneralBaseTest
 
 

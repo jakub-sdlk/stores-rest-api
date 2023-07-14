@@ -1,4 +1,4 @@
-from starter_code.models.user import UserModel
+from models.user import UserModel
 from tests.general_base_test import GeneralBaseTest
 
 
