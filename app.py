@@ -9,7 +9,7 @@ from starter_code.resources.item import Item, ItemList
 from starter_code.resources.store import Store, StoreList
 from starter_code.resources.user import UserRegister
 
-import pytest
+from starter_code.db import db
 
 
 app = Flask(__name__)
@@ -30,6 +30,8 @@ api.add_resource(StoreList, '/stores')
 
 api.add_resource(UserRegister, '/register')
 
+db.init_app(app)
+
 
 @app.errorhandler(JWTError)
 def auth_error_handler(err):
@@ -38,10 +40,6 @@ def auth_error_handler(err):
 
 
 if __name__ == '__main__':
-    from starter_code.db import db
-
-    db.init_app(app)
-
     if app.config['DEBUG']:
         with app.app_context():
             def create_tables():
